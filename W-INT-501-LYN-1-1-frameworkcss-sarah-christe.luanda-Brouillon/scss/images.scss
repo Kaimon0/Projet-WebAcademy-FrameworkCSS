@@ -1,0 +1,24 @@
+@import "breakpoints";
+
+@mixin img ($radius) {
+    width: 200px;
+    height: 200px;
+    border-radius: $radius;
+}
+
+.img-thumbnail {
+    @include img ($thumbnail-radius)
+}
+
+.img-rounded {
+    @include img ($rounded)
+}
+
+.img-circle {
+    @include img ($circle)
+}
+
+
+mi
+
+

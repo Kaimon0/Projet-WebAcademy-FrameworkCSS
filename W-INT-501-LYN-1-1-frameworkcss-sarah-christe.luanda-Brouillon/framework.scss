@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+$grid-width: 200rem;
+$color: orange;
+
+.row {
+    display: flex;
+    max-width: $grid-width;
+    margin: 0 auto;
+
+    [class^="col-"] {
+        // float: left;
+        background-color: $color;
+        padding: 1rem;
+        border: solid purple 2px;
+    }
+}
+
+$grid-breakpoints: (
+    "xs": 0,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 992px,
+    "xl": 1200px,
+    "xxl": 1400px
+);
+
+@mixin break($size) {
+    @media screen and (min-width: map-get($grid-breakpoints, $size)) {
+        @content;
+    }
+
+}
+
+
+[class^="col-"] {
+    flex: 1;
+}
+
+@include break("xs") {
+    [class^="col-"] {
+        width: 100%;
+    }
+
+}
+
+@include break("sm") {
+    [class^="col-"] {
+        width: 100%;
+    }
+
+}
+
+@include break("md") {
+    [class^="col-"] {
+        width: 100%;
+    }
+
+}
+
+@include break("lg") {
+    [class^="col-"] {
+        width: 100%;
+    }
+
+}
+
+@include break("xl") {
+    [class^="col-"] {
+        width: 100%;
+    }
+
+}
+
+@include break("xxl") {
+    [class^="col-"] {
+        width: 100%;
+    }
+
+}
+
